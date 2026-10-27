@@ -9,10 +9,11 @@ pipeline {
         }
 
         stage('Test') {
-            steps {
-                bat 'python -m pytest'
-            }
-        }
+    steps {
+        bat 'python -m pip install pytest'
+        bat 'python -m pytest'
+    }
+}
 
         stage('Deploy') {
             steps {
