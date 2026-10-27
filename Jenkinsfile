@@ -9,15 +9,15 @@ pipeline {
         }
 
         stage('Test') {
-    steps {
-        bat 'python -m pip install pytest'
-        bat 'python -m pytest'
-    }
-}
+            steps {
+                bat 'python -m pip install pytest'
+                bat 'python -m pytest'
+            }
+        }
 
         stage('Deploy') {
             steps {
-                echo 'เพิ่มคำสั่ง deploy ของโปรเจกต์ภายหลัง'
+                echo 'ทดสอบผ่านแล้ว แต่ยังไม่ได้กำหนดคำสั่ง deploy จริง'
             }
         }
     }
